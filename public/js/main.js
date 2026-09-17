@@ -49,6 +49,11 @@
     if (/^(https?:)?\/\//i.test(s) || s.startsWith('/') || s.startsWith('data:')) return s;
     return `/${s.replace(/^\.\//, '')}`;
   };
+  const eventImageUrl = (event = {}) => {
+    const embedded = window.MPC_EMBEDDED_EVENT_IMAGES?.[event.guest];
+    if (embedded) return embedded;
+    return assetUrl(event.speakerImage || event.images?.[0]);
+  };
 
   const header = document.querySelector('[data-site-header]');
   if (header) {
@@ -84,7 +89,7 @@
         <div class="footer-grid">
           <div><div class="footer-brand">McGill Private Capital</div><p class="footer-copy">A student-run finance organization at McGill University focused on investment banking, private equity and investing careers.</p></div>
           <div><div class="footer-heading">Explore</div><div class="footer-links"><a href="about.html">About</a><a href="team.html">Team</a><a href="placements.html">Placements</a><a href="events.html">Events</a></div></div>
-          <div><div class="footer-heading">Connect</div><div class="footer-links"><a href="applications.html">Applications</a><a href="${attr(D.site.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
+          <div><div class="footer-heading">Connect</div><div class="footer-links"><a href="applications.html">Applications</a><a href="${attr(D.site.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>${D.site.instagram?`<a href="${attr(D.site.instagram)}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>`:''}</div></div>
         </div>
         <div class="footer-bottom"><span>© <span data-year></span> McGill Private Capital</span><span>Student organization · Montreal, Quebec</span></div>
       </div>
@@ -120,7 +125,7 @@
 
   function eventVisual(e){
     const fallback=`<div class="visual-fallback"><span>${esc(e.firm)}</span><strong>${esc(e.guest)}</strong></div>`;
-    const image=assetUrl(e.speakerImage || e.images?.[0]);
+    const image=eventImageUrl(e);
     if(!image) return `<div class="event-visual">${fallback}</div>`;
     return `<div class="event-visual speaker-visual">${fallback}<img src="${attr(image)}" alt="${attr(e.speakerImage ? `Portrait of ${e.guest}` : `${e.title} event photo`)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>`;
   }
@@ -131,14 +136,14 @@
   }
 
   const upcomingList=document.getElementById('upcoming-events');
-  if(upcomingList) upcomingList.innerHTML=(D.upcomingEvents||[]).map(e=>`<article class="upcoming-event" data-reveal><div class="upcoming-date"><span>${esc(e.date)}</span>${e.time?`<strong>${esc(e.time)}</strong>`:''}</div>${e.speakerImage?`<div class="upcoming-speaker"><img src="${attr(assetUrl(e.speakerImage))}" alt="Portrait of ${attr(e.guest)}" loading="lazy" onerror="this.remove()"></div>`:''}<div class="upcoming-copy"><div class="firm">${esc(e.firm)}${e.titleLine?` · ${esc(e.titleLine)}`:''}</div><h2>${esc(e.title)}</h2><p>${esc(e.description)}</p></div></article>`).join('');
+  if(upcomingList) upcomingList.innerHTML=(D.upcomingEvents||[]).map(e=>`<article class="upcoming-event" data-reveal><div class="upcoming-date"><span>${esc(e.date)}</span>${e.time?`<strong>${esc(e.time)}</strong>`:''}</div>${eventImageUrl(e)?`<div class="upcoming-speaker"><img src="${attr(eventImageUrl(e))}" alt="Portrait of ${attr(e.guest)}" loading="lazy"></div>`:''}<div class="upcoming-copy"><div class="firm">${esc(e.firm)}${e.titleLine?` · ${esc(e.titleLine)}`:''}</div><h2>${esc(e.title)}</h2><p>${esc(e.description)}</p></div></article>`).join('');
 
   const eventList=document.getElementById('event-list');
   if(eventList) eventList.innerHTML=(D.events || []).map(e=>`<article class="event-row" data-reveal><div class="event-meta">${esc(e.date)}</div>${eventVisual(e)}<div class="event-copy"><div class="firm">${esc(e.firm)}</div><h2>${esc(e.title)}</h2><p>${esc(e.description)}</p>${eventGallery(e)}</div></article>`).join('');
   const homeEvents=document.getElementById('home-events');
   if(homeEvents){
     const featured=[...(D.upcomingEvents||[]),...(D.events||[])].slice(0,3);
-    homeEvents.innerHTML=featured.map(e=>`<article class="home-event" data-reveal>${e.speakerImage?`<img class="home-event-speaker" src="${attr(assetUrl(e.speakerImage))}" alt="Portrait of ${attr(e.guest)}" loading="lazy">`:''}<div class="date">${esc(e.date)}${e.time?` · ${esc(e.time)}`:''}</div><h3>${esc(e.title)}</h3><div class="muted">${esc(e.firm)}</div></article>`).join('');
+    homeEvents.innerHTML=featured.map(e=>`<article class="home-event" data-reveal>${eventImageUrl(e)?`<img class="home-event-speaker" src="${attr(eventImageUrl(e))}" alt="Portrait of ${attr(e.guest)}" loading="lazy">`:''}<div class="date">${esc(e.date)}${e.time?` · ${esc(e.time)}`:''}</div><h3>${esc(e.title)}</h3><div class="muted">${esc(e.firm)}</div></article>`).join('');
   }
 
   document.querySelectorAll('[data-app-status]').forEach(el=>el.textContent=D.site.applicationStatus || 'Applications');

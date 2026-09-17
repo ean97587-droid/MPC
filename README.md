@@ -1,7 +1,3 @@
-# McGill Private Capital website
+# MPC event-image hardening patch
 
-- `public/` is the website Cloudflare serves.
-- `.pages.yml` configures Pages CMS and edits files inside `public/`.
-- `wrangler.jsonc` tells Cloudflare to deploy only `public/` as static assets.
-
-Routine edits should be made through Pages CMS. Cloudflare deploys changes from the `main` branch automatically.
+This package keeps the editable Pages CMS / GitHub / Cloudflare architecture, but embeds the three supplied speaker headshots directly in JavaScript as a fallback for the existing events. This makes Marco Cianflone, Nicholas Moritsugu, and Michael Korzinstone render even if an asset path is missing or a static image request fails. Normal CMS-uploaded images continue to work for future events.

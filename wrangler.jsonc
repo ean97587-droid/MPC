@@ -2,11 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "mpc",
   "compatibility_date": "2026-09-17",
-  "observability": {
-    "enabled": true
-  },
+  "observability": { "enabled": true },
   "assets": {
     "directory": "./public",
+    "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
 }

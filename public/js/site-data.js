@@ -4,6 +4,7 @@ window.MPC_DATA = {
     shortName: "MPC",
     tagline: "Developing McGill students for careers in investment banking, private equity and investing.",
     linkedin: "https://ca.linkedin.com/company/mcgill-bankers-international-association",
+    instagram: "https://www.instagram.com/mcgillprivatecapital/",
     applicationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd063vJ2XtLEz2rOyBuzQo5cYrJlWLbV7QphKNVpsaijY_uTw/viewform?usp=sharing&ouid=103483088891125165151",
     applicationStatus: "Applications open",
     applicationDeadline: "See application form"
