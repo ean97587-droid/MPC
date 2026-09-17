@@ -143,7 +143,7 @@
   if(eventList) eventList.innerHTML=(D.events || []).map(e=>`<article class="event-row" data-reveal><div class="event-meta">${esc(e.date)}</div>${eventVisual(e)}<div class="event-copy"><div class="firm">${esc(e.firm)}</div><h2>${esc(e.title)}</h2><p>${esc(e.description)}</p>${eventGallery(e)}</div></article>`).join('');
   const homeEvents=document.getElementById('home-events');
   if(homeEvents){
-    const featured=[...(D.upcomingEvents||[]),...(D.events||[])].slice(0,3);
+    const featured=[...(D.upcomingEvents||[]).filter(e=>e.showOnHome!==false),...(D.events||[]).filter(e=>e.showOnHome!==false)].slice(0,3);
     homeEvents.innerHTML=featured.map(e=>`<article class="home-event" data-reveal>${eventImageUrl(e)?`<img class="home-event-speaker" src="${attr(eventImageUrl(e))}" alt="Portrait of ${attr(e.guest)}" loading="lazy">`:''}<div class="date">${esc(e.date)}${e.time?` · ${esc(e.time)}`:''}</div><h3>${esc(e.title)}</h3><div class="muted">${esc(e.firm)}</div></article>`).join('');
   }
 

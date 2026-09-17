@@ -71,6 +71,17 @@ window.MPC_DATA = {
       time: "11:30 AM",
       speakerImage: "assets/events/michael-korzinstone.jpg",
       description: "Michael Korzinstone, Partner at Altas Partners, will join McGill Private Capital for a fireside chat on private equity investing, career development and lessons from his experience in the industry."
+    },
+    {
+      title: "Fireside Chat with Daniel Maev",
+      guest: "Daniel Maev",
+      titleLine: "Managing Director, M&A",
+      firm: "CIBC Capital Markets",
+      date: "November 13, 2026",
+      time: "11:30 AM",
+      speakerImage: "assets/events/daniel-maev.jpg",
+      showOnHome: false,
+      description: "Daniel Maev, Managing Director in M&A at CIBC Capital Markets, will join McGill Private Capital for a fireside chat on M&A advisory, transaction execution and career development in investment banking."
     }
   ],
   events: [
@@ -102,7 +113,7 @@ window.MPC_DATA = {
     }
   ],
   values: [
-    { title: "Kindness", text: "We treat people with respect and make time to help - through career advice, interview preparation, introductions and informal mentorship. MPC is strongest when members invest in one another as deliberately as they invest in their own development." },
+    { title: "Kindness", text: "We treat people with respect and make time to help—through career advice, interview preparation, introductions and informal mentorship. MPC is strongest when members invest in one another as deliberately as they invest in their own development." },
     { title: "Integrity", text: "We hold ourselves to a high standard of honesty, judgment and consistency. Trust is built by doing the right thing when it is inconvenient and by being accountable to each other and to the community we represent." },
     { title: "Dedication", text: "We believe meaningful outcomes come from sustained effort. MPC members are expected to prepare thoroughly, follow through on commitments and pursue excellence in both their professional and personal lives." }
   ]
