@@ -1,0 +1,76 @@
+{
+  "banking": [
+    {
+      "name": "Evercore",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Evercore_logo.svg",
+      "className": "logo-wide"
+    },
+    {
+      "name": "Lazard",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/8/89/Lazard_wordmark.svg",
+      "className": "logo-wide"
+    },
+    {
+      "name": "Goldman Sachs",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Goldman_Sachs_logo.svg",
+      "className": "logo-tall"
+    },
+    {
+      "name": "J.P. Morgan",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/JPMorgan_logo.svg",
+      "className": "logo-wide"
+    },
+    {
+      "name": "Morgan Stanley",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Morgan_Stanley_Logo_2024.svg",
+      "className": "logo-wide"
+    },
+    {
+      "name": "RBC Capital Markets",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1c/RBC_Capital_Markets_Logo.svg",
+      "className": "logo-medium"
+    },
+    {
+      "name": "Barclays",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/8/88/Barclays_wordmark.svg",
+      "className": "logo-wide"
+    },
+    {
+      "name": "BMO",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/03/BMO_Logo.svg",
+      "className": "logo-medium"
+    },
+    {
+      "name": "CIBC Capital Markets",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/66/CIBC_CM.png",
+      "className": "logo-medium"
+    },
+    {
+      "name": "UBS",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/34/UBS_Logo.png",
+      "className": "logo-medium"
+    }
+  ],
+  "investments": [
+    {
+      "name": "Ontario Teachers’ Pension Plan",
+      "logo": "https://s7d1.scene7.com/is/image/otpp/default-news-otpp-logo%3ABArticle?fmt=webp&hei=342&wid=1024",
+      "className": "logo-otpp"
+    },
+    {
+      "name": "CDPQ",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/58/Caisse_de_d%C3%A9p%C3%B4t_et_placement_du_Qu%C3%A9bec_logo.svg",
+      "className": "logo-wide"
+    },
+    {
+      "name": "CPP Investments",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0a/CPP_Investment_Board_Logo.svg",
+      "className": "logo-wide"
+    },
+    {
+      "name": "PSP Investments",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/PSP_Investments_Logo.svg",
+      "className": "logo-medium"
+    }
+  ]
+}
