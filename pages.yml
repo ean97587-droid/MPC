@@ -1,0 +1,380 @@
+media:
+  - name: team
+    label: Team headshots
+    input: public/assets/team
+    output: /assets/team
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+  - name: events
+    label: Event & speaker photos
+    input: public/assets/events
+    output: /assets/events
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+  - name: logos
+    label: Logos
+    input: public/assets/logos
+    output: /assets/logos
+    extensions: [jpg, jpeg, png, webp, svg]
+    rename: safe
+  - name: uploads
+    label: General images
+    input: public/assets/uploads
+    output: /assets/uploads
+    extensions: [jpg, jpeg, png, webp, svg]
+    rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      create: "cms: add {filename}"
+      update: "cms: update {filename}"
+      delete: "cms: remove {filename}"
+
+content:
+  - name: site-settings
+    label: Site & Applications
+    type: file
+    path: public/content/site.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: site
+        label: Site settings
+        type: object
+        fields:
+          - name: name
+            label: Organization name
+            type: string
+            required: true
+          - name: shortName
+            label: Short name
+            type: string
+          - name: tagline
+            label: Tagline
+            type: text
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+          - name: instagram
+            label: Instagram URL
+            type: string
+            description: Public MPC Instagram profile URL.
+          - name: applicationUrl
+            label: Application form URL
+            type: string
+            description: Paste the Google Form or other application link here.
+          - name: applicationStatus
+            label: Application status
+            type: select
+            options:
+              values: ["Applications open", "Applications closed", "Opening soon"]
+          - name: applicationDeadline
+            label: Application deadline / note
+            type: string
+      - name: stats
+        label: Homepage stats
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{value} — {label}"
+        fields:
+          - name: value
+            label: Value
+            type: string
+            required: true
+          - name: label
+            label: Label
+            type: string
+            required: true
+      - name: values
+        label: MPC values
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Value
+            type: string
+            required: true
+          - name: text
+            label: Description
+            type: text
+            required: true
+
+  - name: team
+    label: Team
+    type: file
+    path: public/content/team.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: leadership
+        label: Executive Team
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name} — {role}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: role
+            label: Role
+            type: string
+            required: true
+          - name: placement
+            label: Placement / experience line
+            type: string
+          - name: email
+            label: Email
+            type: string
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+          - name: image
+            label: Headshot
+            type: image
+            options:
+              media: team
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+      - name: senior
+        label: Senior Analysts
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: role
+            label: Role
+            type: string
+            default: Senior Analyst
+          - name: placement
+            label: Placement / experience line
+            type: string
+          - name: email
+            label: Email
+            type: string
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+          - name: image
+            label: Headshot
+            type: image
+            options:
+              media: team
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+      - name: junior
+        label: Junior Analysts
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: role
+            label: Role
+            type: string
+            default: Junior Analyst
+          - name: placement
+            label: Placement / experience line
+            type: string
+          - name: email
+            label: Email
+            type: string
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+          - name: image
+            label: Headshot
+            type: image
+            options:
+              media: team
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+
+  - name: events
+    label: Events
+    type: file
+    path: public/content/events.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: upcomingEvents
+        label: Upcoming events
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{date} — {title}"
+        fields:
+          - name: title
+            label: Event title
+            type: string
+            required: true
+          - name: guest
+            label: Speaker / guest
+            type: string
+          - name: titleLine
+            label: Speaker title
+            type: string
+            description: "Example: Partner or Managing Director."
+          - name: firm
+            label: Firm / organization
+            type: string
+            required: true
+          - name: date
+            label: Display date
+            type: string
+            required: true
+            description: "Example: October 2, 2026"
+          - name: time
+            label: Time
+            type: string
+            description: "Example: 11:30 AM"
+          - name: speakerImage
+            label: Speaker headshot
+            type: image
+            options:
+              media: events
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: description
+            label: Description
+            type: text
+            required: true
+      - name: events
+        label: Past events
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{date} — {title}"
+        fields:
+          - name: title
+            label: Event title
+            type: string
+            required: true
+          - name: guest
+            label: Speaker / guest
+            type: string
+          - name: firm
+            label: Firm / organization
+            type: string
+            required: true
+          - name: date
+            label: Display date
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: speakerImage
+            label: Main event image / speaker headshot
+            type: image
+            options:
+              media: events
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: imageFit
+            label: Main image fit
+            type: select
+            options:
+              values: ["cover", "contain"]
+            description: Use contain for logos; cover for headshots/photos.
+          - name: images
+            label: Event photo gallery
+            type: image
+            options:
+              media: events
+              multiple:
+                max: 20
+              unique: true
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+            description: Upload up to 20 photos. They will appear as a gallery under this event.
+
+  - name: placements
+    label: Placements
+    type: file
+    path: public/content/placements.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: banking
+        label: Investment Banking
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Firm
+            type: string
+            required: true
+          - name: logoImage
+            label: Uploaded logo
+            type: image
+            options:
+              media: logos
+              extensions: [jpg, jpeg, png, webp, svg]
+              rename: safe
+          - name: logo
+            label: External logo URL (optional fallback)
+            type: string
+          - name: className
+            label: Logo sizing
+            type: select
+            options:
+              values: ["logo-wide", "logo-medium", "logo-tall", "logo-otpp"]
+      - name: investments
+        label: Private Markets / Investing
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Firm
+            type: string
+            required: true
+          - name: logoImage
+            label: Uploaded logo
+            type: image
+            options:
+              media: logos
+              extensions: [jpg, jpeg, png, webp, svg]
+              rename: safe
+          - name: logo
+            label: External logo URL (optional fallback)
+            type: string
+          - name: className
+            label: Logo sizing
+            type: select
+            options:
+              values: ["logo-wide", "logo-medium", "logo-tall", "logo-otpp"]
