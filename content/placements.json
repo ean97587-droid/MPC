@@ -69,7 +69,7 @@
     },
     {
       "name": "PSP Investments",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/PSP_Investments_Logo.svg",
+      "logoImage": "/assets/logos/images-3.png",
       "className": "logo-medium"
     }
   ]
