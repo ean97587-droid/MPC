@@ -7,7 +7,7 @@
       "firm": "Altas Partners",
       "date": "October 2, 2026",
       "time": "11:30 AM",
-      "speakerImage": "assets/events/michael-korzinstone.jpg",
+      "speakerImage": "/assets/events/michael-korzinstone.jpg",
       "description": "Michael Korzinstone, Partner at Altas Partners, will join McGill Private Capital for a fireside chat on private equity investing, career development and lessons from his experience in the industry."
     }
   ],
@@ -18,7 +18,7 @@
       "firm": "Sectoral Asset Management",
       "date": "February 5, 2026",
       "description": "Marco shared perspectives from his path through Harvard and his work in healthcare investing, giving members a closer look at how specialized industry knowledge can inform public-equity underwriting.",
-      "speakerImage": "assets/events/marco-cianflone.jpg"
+      "speakerImage": "/assets/events/unnamed-1.jpg"
     },
     {
       "title": "Fireside Chat with Nicholas Moritsugu",
@@ -26,15 +26,14 @@
       "firm": "ONCAP Management Partners",
       "date": "March 19, 2026",
       "description": "McGill alumnus and ONCAP Principal Nicholas Moritsugu discussed his path through investment banking and North American mid-market private equity, sharing practical lessons on career development and investing.",
-      "speakerImage": "assets/events/nicholas-moritsugu.jpg"
+      "speakerImage": "/assets/events/nicholas-moritsugu.jpg"
     },
     {
       "title": "Sagard Private Equity Visit",
       "guest": "Sagard Private Equity Team",
       "firm": "Sagard",
       "date": "April 15, 2026",
-      "description": "MPC members met with Sagard’s private equity team in Montreal to discuss selected investments, lower-middle-market private equity and the judgment and preparation required to build a career in the industry.",
-      "images": []
+      "description": "MPC members met with Sagard’s private equity team in Montreal to discuss selected investments, lower-middle-market private equity and the judgment and preparation required to build a career in the industry."
     }
   ]
 }
