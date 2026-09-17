@@ -36,7 +36,12 @@
       "guest": "Sagard Private Equity Team",
       "firm": "Sagard",
       "date": "April 15, 2026",
-      "description": "MPC members met with Sagard’s private equity team in Montreal to discuss selected investments, lower-middle-market private equity and the judgment and preparation required to build a career in the industry."
+      "description": "MPC members met with Sagard’s private equity team in Montreal to discuss selected investments, lower-middle-market private equity and the judgment and preparation required to build a career in the industry.",
+      "speakerImage": "/assets/events/images-2.png",
+      "images": [
+        "/assets/events/35c2f520-dec7-4e9a-baa1-a1e6c00eaff8-1.jpg",
+        "/assets/events/eed12cd4-78fe-4566-8862-661c81a5e8f0.jpg"
+      ]
     }
   ]
 }
