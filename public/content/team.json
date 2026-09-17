@@ -1,0 +1,118 @@
+{
+  "leadership": [
+    {
+      "name": "Eric An",
+      "role": "Co-President",
+      "placement": "Ontario Teachers’ Pension Plan · Private Equity · Summer 2026",
+      "email": "eric.an@mail.mcgill.ca",
+      "linkedin": "https://ca.linkedin.com/in/eric-an-78480418a",
+      "image": "assets/team/eric-an.jpg"
+    },
+    {
+      "name": "Patrick Koszczuk",
+      "role": "Co-President",
+      "placement": "SMBC · Investment Banking · Summer 2026",
+      "email": "patrick.koszczuk@mail.mcgill.ca",
+      "linkedin": "https://www.linkedin.com/in/patrick-koszczuk",
+      "image": "assets/team/patrick-koszczuk.jpg"
+    },
+    {
+      "name": "Loukas Yantsulis",
+      "role": "Junior Executive",
+      "email": "loukas.yantsulis@mail.mcgill.ca",
+      "linkedin": "https://www.linkedin.com/in/loukas-yantsulis/",
+      "image": "assets/team/loukas-yantsulis.jpg"
+    },
+    {
+      "name": "Nathan Biezing",
+      "role": "Junior Executive",
+      "email": "nathan.biezing@mail.mcgill.ca",
+      "linkedin": "https://ca.linkedin.com/in/nathan-biezing",
+      "image": "assets/team/nathan-biezing.jpg"
+    }
+  ],
+  "senior": [
+    {
+      "name": "Tarek Hussein",
+      "role": "Senior Analyst",
+      "image": "assets/team/tarek-hussein.jpg"
+    },
+    {
+      "name": "Thea Dickinson",
+      "role": "Senior Analyst",
+      "image": "assets/team/thea-dickinson.jpg"
+    },
+    {
+      "name": "Rayan Benqilou",
+      "role": "Senior Analyst",
+      "linkedin": "https://ca.linkedin.com/in/rayanbenqlilou",
+      "image": "assets/team/rayan-benqilou.jpg"
+    },
+    {
+      "name": "Aidan Guerra",
+      "role": "Senior Analyst",
+      "linkedin": "https://www.linkedin.com/in/aidan-guerra",
+      "image": "assets/team/aidan-guerra.jpg"
+    }
+  ],
+  "junior": [
+    {
+      "name": "Frederik Miller",
+      "role": "Junior Analyst",
+      "image": "assets/team/frederik-miller.jpg"
+    },
+    {
+      "name": "Coby Bennett",
+      "role": "Junior Analyst",
+      "image": "assets/team/coby-bennett.jpg"
+    },
+    {
+      "name": "Able Kim",
+      "role": "Junior Analyst",
+      "image": "assets/team/able-kim.jpg"
+    },
+    {
+      "name": "Oscar Bockmann",
+      "role": "Junior Analyst",
+      "image": "assets/team/oscar-bockmann.jpg"
+    },
+    {
+      "name": "Elliot Caicoya",
+      "role": "Junior Analyst",
+      "image": "assets/team/elliot-caicoya.jpg"
+    },
+    {
+      "name": "Olivier Gauthier",
+      "role": "Junior Analyst",
+      "linkedin": "https://ca.linkedin.com/in/olivier-gauthier-b0578b326",
+      "image": "assets/team/olivier-gauthier.jpg"
+    },
+    {
+      "name": "Diego Estero",
+      "role": "Junior Analyst",
+      "linkedin": "https://ca.linkedin.com/in/diegoestero",
+      "image": "assets/team/diego-estero.jpg"
+    },
+    {
+      "name": "Leah Allen-Cheng",
+      "role": "Junior Analyst",
+      "image": "assets/team/leah-allen-cheng.jpg"
+    },
+    {
+      "name": "William Jarry",
+      "role": "Junior Analyst",
+      "image": "assets/team/william-jarry.jpg"
+    },
+    {
+      "name": "Luke Rice",
+      "role": "Junior Analyst",
+      "image": "assets/team/luke-rice.jpg"
+    },
+    {
+      "name": "Zenon Ouellette",
+      "role": "Junior Analyst",
+      "linkedin": "https://ca.linkedin.com/in/zenon-ouellette",
+      "image": ""
+    }
+  ]
+}
