@@ -102,7 +102,7 @@ window.MPC_DATA = {
     }
   ],
   values: [
-    { title: "Kindness", text: "We treat people with respect and make time to help—through career advice, interview preparation, introductions and informal mentorship. MPC is strongest when members invest in one another as deliberately as they invest in their own development." },
+    { title: "Kindness", text: "We treat people with respect and make time to help - through career advice, interview preparation, introductions and informal mentorship. MPC is strongest when members invest in one another as deliberately as they invest in their own development." },
     { title: "Integrity", text: "We hold ourselves to a high standard of honesty, judgment and consistency. Trust is built by doing the right thing when it is inconvenient and by being accountable to each other and to the community we represent." },
     { title: "Dedication", text: "We believe meaningful outcomes come from sustained effort. MPC members are expected to prepare thoroughly, follow through on commitments and pursue excellence in both their professional and personal lives." }
   ]

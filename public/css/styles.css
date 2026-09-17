@@ -347,7 +347,7 @@ button { font:inherit; }
 .event-visual.logo-visual { background:#fff; }
 .event-visual.logo-visual img { object-fit:contain; object-position:center; padding:8%; background:#fff; }
 
-/* Institutional refinement — shared across all public pages. */
+/* Institutional refinement - shared across all public pages. */
 :root {
   --ink:#14232e; --navy:#102632; --navy-2:#1c3948;
   --paper:#f1f0eb; --paper-2:#fff; --muted:#627079;
@@ -411,7 +411,7 @@ a:focus-visible,button:focus-visible { outline:2px solid #a28960; outline-offset
 .page-hero .lede { color:#c4cfd4; font-size:1.1rem; max-width:710px; }
 .team-grid { gap:44px 28px; }
 .portrait { border:0; aspect-ratio:4/5; }
-.portrait img { filter:grayscale(1); }
+.portrait img { filter:none; }
 .team-card h3 { font-size:1.4rem; }
 .role { color:#586a74; font-size:.64rem; font-weight:500; }
 .card-links { font-size:.64rem; }
