@@ -127,7 +127,8 @@
     const fallback=`<div class="visual-fallback"><span>${esc(e.firm)}</span><strong>${esc(e.guest)}</strong></div>`;
     const image=eventImageUrl(e);
     if(!image) return `<div class="event-visual">${fallback}</div>`;
-    return `<div class="event-visual speaker-visual">${fallback}<img src="${attr(image)}" alt="${attr(e.speakerImage ? `Portrait of ${e.guest}` : `${e.title} event photo`)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>`;
+    const fitClass=e.imageFit==='contain'?' logo-visual':'';
+    return `<div class="event-visual speaker-visual${fitClass}">${fallback}<img src="${attr(image)}" alt="${attr(`${e.title} image`)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div>`;
   }
   function eventGallery(e){
     const images=(e.images || []).map(assetUrl).filter(Boolean);

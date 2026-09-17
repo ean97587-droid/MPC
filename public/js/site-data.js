@@ -96,7 +96,9 @@ window.MPC_DATA = {
       firm: "Sagard",
       date: "April 15, 2026",
       description: "MPC members met with Sagard’s private equity team in Montreal to discuss selected investments, lower-middle-market private equity and the judgment and preparation required to build a career in the industry.",
-      images: []
+      speakerImage: "assets/events/sagard-main.png",
+      imageFit: "contain",
+      images: ["assets/events/sagard-gallery-1.jpg", "assets/events/sagard-gallery-2.jpg"]
     }
   ],
   values: [
