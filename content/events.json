@@ -18,7 +18,10 @@
       "firm": "Sectoral Asset Management",
       "date": "February 5, 2026",
       "description": "Marco shared perspectives from his path through Harvard and his work in healthcare investing, giving members a closer look at how specialized industry knowledge can inform public-equity underwriting.",
-      "speakerImage": "/assets/events/unnamed-1.jpg"
+      "speakerImage": "/assets/events/unnamed-1.jpg",
+      "images": [
+        "/assets/events/unnamed-2.jpg"
+      ]
     },
     {
       "title": "Fireside Chat with Nicholas Moritsugu",
